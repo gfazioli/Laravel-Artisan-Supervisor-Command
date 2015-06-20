@@ -14,7 +14,8 @@
 
 4. Run from shell `php artisan shell:supervisor`
 
-
+    
+```
     Usage:
       shell:supervisor [options]
     
@@ -26,3 +27,4 @@
           --stop-all        Stop all supervisor processes
           --up              Start supervisor service
           --down            Stop supervisor service
+```
