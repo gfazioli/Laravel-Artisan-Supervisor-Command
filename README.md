@@ -28,3 +28,9 @@
           --up              Start supervisor service
           --down            Stop supervisor service
 ```
+
+## Broadcast and supervisor links
+
+* http://laravel.com/docs/5.1/events#broadcasting-events
+* http://blog.nedex.io/laravel-5-1-broadcasting-events-using-redis-driver-socket-io/
+* http://posts.danharper.me/laravel-queue-supervisor/
