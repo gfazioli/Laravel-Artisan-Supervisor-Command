@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Laravel Artisan Supervisor Command by gfazioli</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Laravel Artisan Supervisor Command</h1>
+      <h2 class="project-tagline">Laravel Artisan Supervisor Command</h2>
+      <a href="https://github.com/gfazioli/Laravel-Artisan-Supervisor-Command" class="btn">View on GitHub</a>
+      <a href="https://github.com/gfazioli/Laravel-Artisan-Supervisor-Command/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/gfazioli/Laravel-Artisan-Supervisor-Command/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<ol>
+<li>Copy or create <code>SupervisorCommand.php</code> file in your <code>app/Console/Commands</code> folder</li>
+<li>Edit <code>Kernel.php</code> in <code>app/Console/Commands</code> folder</li>
+<li>Add the command in <code>$commands</code> array property</li>
+</ol>
+
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1">    <span class="pl-k">protected</span> <span class="pl-smi">$commands</span> <span class="pl-k">=</span> [</span>
+<span class="pl-s1">        <span class="pl-c1">\App\Console\Commands\</span><span class="pl-c1">SupervisorCommand</span><span class="pl-k">::</span><span class="pl-c1">class</span>,</span>
+<span class="pl-s1">    ];</span></pre></div>
+
+<ol>
+<li>Run from shell <code>php artisan shell:supervisor</code>
+</li>
+</ol>
+
+<pre><code>    Usage:
+      shell:supervisor [options]
+
+    Options:
+          --list            List supervisor processes
+          --start[=START]   Start supervisor process by process name
+          --stop[=STOP]     Stop a supervisor process by PID or process name
+          --start-all       Stop all supervisor processes
+          --stop-all        Stop all supervisor processes
+          --up              Start supervisor service
+          --down            Stop supervisor service
+</code></pre>
+
+<h2>
+<a id="broadcast-and-supervisor-links" class="anchor" href="#broadcast-and-supervisor-links" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Broadcast and supervisor links</h2>
+
+<ul>
+<li><a href="http://laravel.com/docs/5.1/events#broadcasting-events">http://laravel.com/docs/5.1/events#broadcasting-events</a></li>
+<li><a href="http://blog.nedex.io/laravel-5-1-broadcasting-events-using-redis-driver-socket-io/">http://blog.nedex.io/laravel-5-1-broadcasting-events-using-redis-driver-socket-io/</a></li>
+<li><a href="http://posts.danharper.me/laravel-queue-supervisor/">http://posts.danharper.me/laravel-queue-supervisor/</a></li>
+</ul>
+
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributing</h2>
+
+<ul>
+<li><a href="#bugs-reports">Bugs Reports</a></li>
+</ul>
+
+<h2>
+<a id="bug-reports" class="anchor" href="#bug-reports" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bug Reports</h2>
+
+<p>GitHub issue <g-emoji alias="bug" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f41b.png">🐛</g-emoji>.</p>
+
+<h2>
+<a id="core-development-discussion" class="anchor" href="#core-development-discussion" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Core Development Discussion</h2>
+
+<p>Discussion regarding bugs, new features, <g-emoji alias="bulb" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f4a1.png">💡</g-emoji>, and implementation of existing features takes place in the issue GitHub channel. If you like, you may connect to the Slack channel as well.</p>
+
+<h2>
+<a id="versioning" class="anchor" href="#versioning" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Versioning</h2>
+
+<p>For transparency and insight into our release cycle, and for striving to maintain backwards compatibility, this code will be maintained under the <strong>Semantic Versioning guidelines</strong> as much as possible.</p>
+
+<p>Releases will be numbered with the following format:</p>
+
+<p><code>&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;</code></p>
+
+<p>Example: <code>1.0.0-alpha &lt; 1.0.0-alpha.1 &lt; 1.0.0-alpha.beta &lt; 1.0.0-beta &lt; 1.0.0-beta.2 &lt; 1.0.0-beta.11 &lt; 1.0.0-rc.1 &lt; 1.0.0</code></p>
+
+<p>And constructed with the following guidelines:</p>
+
+<ul>
+<li>Breaking backwards compatibility bumps the major (and resets the minor and patch)</li>
+<li>New additions without breaking backwards compatibility bumps the minor (and resets the patch)</li>
+<li>Bug fixes and misc changes bumps the patch</li>
+</ul>
+
+<p>For more information on SemVer, please visit <a href="http://semver.org/">http://semver.org/</a>.</p>
+
+<p>For more information about bower versioning, please visit <a href="https://github.com/npm/node-semver">https://github.com/npm/node-semver</a></p>
+
+<h2>
+<a id="security-vulnerabilities" class="anchor" href="#security-vulnerabilities" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Security Vulnerabilities​</h2>
+
+<p>​If you discover a security vulnerability <g-emoji alias="lock" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f512.png">🔒</g-emoji> within this project, please send an e-mail to Giovambattista Fazioli at <a href="mailto:g.fazioli@undolog.com">g.fazioli@undolog.com</a>. All security vulnerabilities will be promptly addressed.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/gfazioli/Laravel-Artisan-Supervisor-Command">Laravel Artisan Supervisor Command</a> is maintained by <a href="https://github.com/gfazioli">gfazioli</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
