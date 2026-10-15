@@ -1,5 +1,10 @@
 # Laravel-Artisan-Supervisor-Command
 
+<div align="center">
+  <p><img src="https://raw.githubusercontent.com/gfazioli/gfazioli/master/glancecard/Laravel-Artisan-Supervisor-Command.svg" width="880" alt="Laravel-Artisan-Supervisor-Command at a glance, refreshed daily: commits, releases, stars, issues and pull requests, a year of commit activity, the weekly rhythm, languages, latest commits and releases, contributors" /><br>
+  <sub>Made with <a href="https://github.com/gfazioli/glancecard">glancecard</a> · refreshed daily</sub></p>
+</div>
+
 ## Installation
 
 1. Copy or create `SupervisorCommand.php` file in your `app/Console/Commands` folder
